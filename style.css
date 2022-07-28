@@ -190,20 +190,23 @@ h4 {
 	filter: grayscale(100%);
 }
 
-#recent-projects {
+#recent-projects,
+#our-services {
 	margin: 0 auto;
 	max-width: 1100px;
 	padding-top: 135px;
 }
 
-.projects-cards-area {
+.projects-cards-area,
+.services-cards-area {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 }
 
-.project-card {
+.project-card,
+.service-card {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -224,12 +227,14 @@ h4 {
 	height: 240px;
 }
 
-.project-card h4 {
+.project-card h4,
+.service-card h4 {
 	padding-left: 30px;
 	margin-bottom: 10px;
 }
 
-.project-card a {
+.project-card a,
+.service-card a {
 	padding-left: 30px;
 	color: #072ac8;
 	font-size: 17px;
@@ -239,8 +244,10 @@ h4 {
 	text-align: left;
 }
 
-.project-topic {
+.project-topic,
+.service-topic {
 	padding-left: 30px;
+	padding-right: 30px;
 	padding-bottom: 55px;
 	font-style: normal;
 	font-weight: 400;
@@ -255,17 +262,23 @@ h4 {
 
 .clients-quote-area {
 	margin: 0 auto;
+	position: relative;
 	background-image: url("/img/orbit.png");
 	background-repeat: round;
 	width: 1320px;
 	height: 622px;
 	background-color: #292e47;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap: nowrap;
 }
 
 .clients-quote-text {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
+	align-items: center;
 }
 
 .clients-quote-area h3 {
@@ -274,9 +287,96 @@ h4 {
 }
 
 .clients-quote-area q {
+	width: 596px;
 	color: #ffc600;
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 160%;
 	text-align: center;
+}
+
+.clients-quote-profile {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 100px;
+}
+
+.clients-quote-profile img {
+	width: 50px;
+	height: 50px;
+	border-radius: 150px;
+}
+
+.clients-quote-profile-text {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	padding-left: 10px;
+}
+
+.clients-quote-profile-text h5 {
+	margin: 0;
+	color: #a2d6f9;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 17px;
+	letter-spacing: 0em;
+}
+
+.clients-quote-profile-text h6 {
+	margin: 0;
+	color: #f4f6fc;
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.memoji {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+}
+
+.one {
+	left: 77px;
+	top: 51px;
+}
+
+.two {
+	left: 77px;
+	top: 399px;
+}
+
+.three {
+	left: 1079px;
+	top: 51px;
+}
+
+.four {
+	left: 1100px;
+	top: 399px;
+}
+
+.icon-service-space {
+	background-color: #ecf7ff;
+	width: 80px;
+	height: 80px;
+	border-radius: 150px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+
+.icon-service {
+	width: 40px;
 }
