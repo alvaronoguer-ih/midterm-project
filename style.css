@@ -380,3 +380,110 @@ h4 {
 .icon-service {
 	width: 40px;
 }
+
+#contact {
+	margin: 0 auto;
+	margin-top: 200px;
+	width: 1320px;
+	height: 500px;
+	background-color: #ffc600;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.contact-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 227px;
+	width: 1100px;
+}
+
+.contact-area h3 {
+	color: #292e47;
+	margin-bottom: 20px;
+}
+
+.contact-form {
+	display: flex;
+	padding-top: 50px;
+}
+
+.contact-form-email {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+	align-items: center;
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: 400;
+	color: #292e47;
+	background-color: white;
+	width: 393px;
+	height: 80px;
+}
+
+.contact-form-email img {
+	padding-left: 30px;
+}
+
+.contact-form input[type="email"] {
+	border: none;
+	font-size: 17px;
+	margin-left: 10px;
+	height: 100%;
+	background-color: transparent;
+	width: 310px;
+}
+
+.contact-form input[type="email"]:focus {
+	outline: none;
+}
+
+.contact-form button {
+	width: 198px;
+	height: 80px;
+	background-color: #072ac8;
+	color: white;
+	text-align: center;
+	border: none;
+	margin-left: 20px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+	height: 220px;
+	width: 1100px;
+	margin-top: 170px;
+}
+
+.business-details {
+	display: flex;
+	flex-direction: column;
+}
+
+.business-details img {
+	width: 99px;
+	height: 30px;
+}
+
+.business-details p {
+	width: 252px;
+	height: 52px;
+	color: #6b708d;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 26px;
+	letter-spacing: 0em;
+	text-align: left;
+}
