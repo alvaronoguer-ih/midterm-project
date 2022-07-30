@@ -64,11 +64,13 @@ h4 {
 	flex-wrap: nowrap;
 }
 
-.menu li {
+.menu li,
+.footer-menu li {
 	display: inline;
 }
 
-.menu li a {
+.menu li a,
+.footer-menu li a {
 	text-decoration: none;
 	color: #6b708d;
 }
@@ -486,4 +488,48 @@ footer {
 	line-height: 26px;
 	letter-spacing: 0em;
 	text-align: left;
+}
+
+.footer-menu {
+	display: flex;
+	width: 435px;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+.footer-menu ul {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.footer-menu li {
+	width: 30%;
+}
+
+@media (max-width: 900px) {
+	body {
+		width: 100%;
+	}
+
+	.navbar {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	#home {
+		width: 90%;
+	}
+
+	.main-banner {
+		flex-direction: column;
+	}
 }
