@@ -15,6 +15,10 @@
 	}
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	--main-bg-color: #f2f4fc;
 	background-color: var(--main-bg-color);
@@ -115,7 +119,8 @@ h4 {
 }
 
 .main-banner-text-area h1,
-.explained-project h1 {
+.explained-project h1,
+.contact-form-area h1 {
 	color: #292e47;
 	font-size: 60px;
 	font-weight: 700;
@@ -616,6 +621,93 @@ footer {
 	width: 76%;
 }
 
+.contact-form-area {
+	max-width: 77%;
+	margin: 0 auto;
+	margin-top: 140px;
+}
+
+.contact-form-area form {
+	display: grid;
+	height: auto;
+	margin-top: 80px;
+	grid-template-columns: 1fr 0.1fr 1fr;
+	grid-template-rows: repeat(6, auto);
+}
+
+.contact-form-area label {
+	color: #6b708d;
+	font-weight: 400;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.contact-form-area input {
+	background-color: #6b708d1a;
+	border: none;
+	height: 70px;
+	margin-bottom: 40px;
+	padding-left: 20px;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 150%;
+}
+
+.contact-page-form input[id="fname"] {
+	grid-column: 1 / 4;
+	grid-row: 2 / 3;
+}
+
+.contact-page-form label[for="email"] {
+	grid-row: 3 / 4;
+}
+
+.contact-page-form input[id="email"] {
+	grid-row: 4 / 5;
+	grid-column: 1 / 2;
+}
+
+.contact-page-form label[for="phone"] {
+	grid-row: 3 / 4;
+	grid-column: 3 / 4;
+}
+
+.contact-page-form input[id="phone"] {
+	grid-row: 4 / 5;
+	grid-column: 3 / 4;
+}
+
+.contact-page-form label[for="message"] {
+	grid-row: 5 / 6;
+}
+
+.contact-page-form textarea {
+	font-family: inherit;
+	grid-row: 6 / 7;
+	grid-column: 1 / 4;
+	background-color: #6b708d1a;
+	border: none;
+	resize: vertical;
+	height: 100px;
+	padding: 20px 0px 0px 20px;
+	font-size: 17px;
+}
+
+.contact-page-form button {
+	grid-row: 7 / 8;
+	grid-column: 1 / 4;
+	background-color: #072ac8;
+	margin-top: 40px;
+	height: 80px;
+	color: white;
+	cursor: pointer;
+	border: none;
+}
+
+.contact-page-form button:disabled {
+	background-color: #6b708d;
+}
+
 @media (max-width: 1024px) {
 	header,
 	#home,
@@ -650,7 +742,8 @@ footer {
 	}
 
 	.main-banner-text-area h1,
-	.explained-project h1 {
+	.explained-project h1,
+	.contact-form-area h1 {
 		font-size: 40px;
 		line-height: 115%;
 	}
