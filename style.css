@@ -708,6 +708,16 @@ footer {
 	background-color: #6b708d;
 }
 
+.contact-sent {
+	height: 100%;
+	width: 100%;
+	background-color: #292e47;
+	z-index: 1;
+	user-select: none;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
 @media (max-width: 1024px) {
 	header,
 	#home,
@@ -764,7 +774,8 @@ footer {
 
 	.project-card,
 	.service-card {
-		width: 40%;
+		min-width: 40%;
+		width: max-content;
 		box-shadow: 0px 1px 9px 0px #0000001a;
 		margin-bottom: 2%;
 	}
@@ -913,7 +924,6 @@ footer {
 
 	.project-card,
 	.service-card {
-		min-width: 80%;
 		margin-bottom: 30px;
 		box-shadow: 0px 12px 12px 0px #0000001a;
 	}

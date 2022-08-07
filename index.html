@@ -25,7 +25,7 @@
 						<li><a href="/index.html">Home</a></li>
 						<li><a href="#projects">Projects</a></li>
 						<li><a href="#our-services">Services</a></li>
-						<li><a>Contact Us</a></li>
+						<li><a href="/contact.html">Contact Us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -44,7 +44,7 @@
 					</ul>
 				</div>
 				<div class="call-to-action-m">
-					<button class="cta">Contact Us</button>
+					<button class="cta" onclick="contactBtn()">Contact Us</button>
 				</div>
 		</header>
 
@@ -88,21 +88,21 @@
 					<img src="/img/1.jpg" class="project-card-img" />
 					<h4>Simplify</h4>
 					<span class="project-topic">UI Design & App Development</span>
-					<span><a onclick="queryParameters(document.querySelectorAll('.project-card'))">Learn more</a></span>
+					<span><a onclick="queryParameters(0)">Learn more</a></span>
 				</div>
 
 				<div class="project-card">
 					<img src="/img/2.jpg" class="project-card-img" />
 					<h4>Dash Coin</h4>
 					<span class="project-topic">Web Developement</span>
-					<span><a>Learn more</a></span>
+					<span><a onclick="queryParameters(1)">Learn more</a></span>
 				</div>
 
 				<div class="project-card">
 					<img src="/img/3.jpg" class="project-card-img" />
 					<h4>Vectorify</h4>
 					<span class="project-topic">User Experience Design</span>
-					<span><a>Learn more</a></span>
+					<span><a onclick="queryParameters(2)">Learn more</a></span>
 				</div>
 			</div>
 		</section>

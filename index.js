@@ -1,10 +1,12 @@
+document.addEventListener("change", checkInputsValue)
+document.addEventListener("load", titleSubtitle)
+
+
 function menuOnClick() {
     document.getElementById("menu-bar").classList.toggle("change");
     document.getElementById("nav").classList.toggle("change");
     document.getElementById("menu-bg").classList.toggle("change-bg");
-  }
-
-document.addEventListener("change", checkInputsValue)
+}
 
 function checkInputsValue () {
 let checkInputs = document.querySelectorAll('input');
@@ -34,11 +36,39 @@ function checkFieldForm(fieldValue) {
   } else {
     document.getElementById(fieldValue.id).setAttribute("style", "background-color:#6b708d1a;");
   }
-  }
+}
 
-function queryParameters(e) {
-  let nuevodos = [...e];
-  console.log(nuevodos[0].childNodes[3])
-  let title = nuevodos[0].childNodes[3];
-  window.location.href = `/post.html?title${title}`
+function queryParameters(number) {
+  const datos = document.querySelectorAll('.project-card')
+  const nuevo = [...datos];
+  console.log(nuevo)
+  let title = nuevo[number].childNodes[3].childNodes[0].nodeValue;
+  let subtitle = nuevo[number].childNodes[5].childNodes[0].nodeValue;
+  title = btoa(title)
+  subtitle = btoa(subtitle)
+  console.log(title)
+  console.log(typeof(subtitle))
+  window.location.href = `/post.html?title=${title}&subtitle=${subtitle}`
+}
+
+function contactBtn() {
+  window.location.href = '/contact.html'
+}
+
+function titleSubtitle() {
+  const valores = window.location.search;
+  console.log(valores)
+  const urlParams = new URLSearchParams(valores);
+  console.log(urlParams)
+  let title = urlParams.get('title');
+  let subtitle = urlParams.get('subtitle')
+  title = atob(title)
+  subtitle = atob(subtitle)
+  console.log(title)
+  console.log(subtitle)
+
+  document.getElementById('variableTitle').innerHTML = title; 
+  document.getElementById('variableSubtitle').innerHTML = subtitle; 
+
+
 }
