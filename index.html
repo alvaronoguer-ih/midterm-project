@@ -33,7 +33,7 @@
 			<div class="menu-bg" id="menu-bg"></div>
 		</nav>
 			<nav class="navbar">
-				<div class="logo">
+				<div class="logo" onclick="backHome()">
 					<img src="/img/Logo.png" />
 				</div>
 				<div class="menu-dkt">
@@ -57,7 +57,7 @@
 						develop astonishing websites and mobile apps.
 					</p>
 					<div class="call-to-action-b">
-						<button class="cta">Get in touch</button>
+						<button class="cta" onclick="contactBtn()">Get in touch</button>
 						<h2>See our work</h2>
 					</div>
 				</div>
@@ -176,20 +176,22 @@
 			<div class="contact-area">
 				<h3>Do you have any questions?</h3>
 				<span>Let us help you!</span>
-				<form class="contact-form" action="">
+				<form class="contact-form" action="#">
 					<span class="contact-form-email">
 						<img class="contact-form-img" src="/img/mail.svg" />
 						<input
 							type="email"
 							id="email"
 							name="email"
+							required
 							placeholder="Enter your email"
 						/>
 					</span>
-					<button type="submit">Subscribe</button>
+					<input type="button" value="Submit" onclick="suscribed()" />
 				</form>
 			</div>
 		</section>
+		
 
 		<footer>
 			<div class="business-details">

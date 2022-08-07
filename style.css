@@ -472,7 +472,7 @@ h4 {
 	outline: none;
 }
 
-.contact-form button {
+.contact-form input[type="button"] {
 	width: 198px;
 	height: 80px;
 	background-color: #072ac8;
@@ -718,6 +718,10 @@ footer {
 	overflow-y: hidden;
 }
 
+.contact-form-area button {
+	margin-top: 3%;
+}
+
 @media (max-width: 1024px) {
 	header,
 	#home,
@@ -811,6 +815,10 @@ footer {
 
 	.project-text-explanation {
 		padding-top: 5%;
+	}
+
+	.contact-form-area {
+		max-width: 90%;
 	}
 }
 

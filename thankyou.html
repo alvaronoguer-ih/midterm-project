@@ -11,7 +11,7 @@
 		/>
 		<title>Circle</title>
 	</head>
-	<body>
+	<body onload="thanksPage()">
 		<header>
 			<!-- menu mobile-->
 			<div id="menu">
@@ -50,51 +50,10 @@
 
 		<section class="contact-form-area">
 			<h1>Contact Us</h1>
-			<div class="contact-page-form">
-				<form>
-					<label for="fname">Full name</label>
-					<input
-						class="contact-field"
-						type="text"
-						id="fname"
-						name="fname"
-						placeholder="Enter your full name"
-						required
-						onchange="checkFieldForm(document.getElementById('fname'))"
-					/>
-					<label for="email">Email</label>
-					<input
-						class="contact-field"
-						type="email"
-						id="email"
-						name="email"
-						placeholder="Enter your email address"
-						required
-						onchange="checkFieldForm(document.getElementById('email'))"
-					/>
-					<label for="phone">Phone</label>
-					<input
-						class="contact-field"
-						type="tel"
-						pattern="[0-9]{9}"
-						id="phone"
-						name="phone"
-						placeholder="Enter your phone number (9 digits format)"
-						required
-						onchange="checkFieldForm(document.getElementById('phone'))"
-					/>
-					<label for="message">Message</label>
-					<textarea
-						class="contact-field"
-						id="message"
-						name="message"
-						placeholder="Write your message here ...."
-					></textarea>
+			<h2 id="thanks-h2"></h2>
+			<p id="thanks-p"></p>
+			<button class="cta" onclick="backHome()">Volver al inicio</button>
 
-					<button id="btn-submit" type="submit" value="Submit" disabled="true">
-						Submit
-					</button>
-				</form>
 			</div>
 		</section>
 

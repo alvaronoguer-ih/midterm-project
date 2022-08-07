@@ -1,6 +1,4 @@
-document.addEventListener("change", checkInputsValue)
 document.addEventListener("load", titleSubtitle)
-
 
 function menuOnClick() {
     document.getElementById("menu-bar").classList.toggle("change");
@@ -15,7 +13,6 @@ const anyEmpty = [];
 let btndesact = document.getElementById("btn-submit")
 
 inputsArray.forEach(element => {
-    console.log(element.value)
     anyEmpty.push(element.value)
     return anyEmpty;
   });
@@ -30,7 +27,6 @@ if (!anyEmpty.includes("")) {
 }
 
 function checkFieldForm(fieldValue) {
-  console.log(fieldValue.id)
   if (fieldValue.value != "") {
     document.getElementById(fieldValue.id).setAttribute("style", "background-color:#292E47; color:white");
   } else {
@@ -55,6 +51,33 @@ function contactBtn() {
   window.location.href = '/contact.html'
 }
 
+function backHome() {
+  window.location.href = '/index.html'
+}
+
+function suscribed() {
+  console.log("ok")
+  const validador = document.getElementsByClassName('contact-form-email')[0].childNodes[3].value;
+
+  if (checkEmail(validador) == true) {
+  document.querySelector('.contact-area span').setAttribute('style', 'display: none')
+  document.querySelector('.contact-area h3').innerHTML = `Thanks for subscribing`
+  document.querySelector('.contact-form').setAttribute('style', 'display: none')
+  } else {
+    console.log("NOPE")
+  }
+}
+
+function checkEmail(email) {
+  const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+  let emailToCheck = email;
+  let emailchecked = emailRegex.test(emailToCheck)
+  console.log(emailchecked)
+  return emailchecked
+}
+
+
+
 function titleSubtitle() {
   const valores = window.location.search;
   console.log(valores)
@@ -69,6 +92,23 @@ function titleSubtitle() {
 
   document.getElementById('variableTitle').innerHTML = title; 
   document.getElementById('variableSubtitle').innerHTML = subtitle; 
-
-
 }
+
+function thanksPage() {
+  const valores = window.location.search;
+  const urlParams = new URLSearchParams(valores);
+  let name = urlParams.get('fname');
+  let phone = urlParams.get('phone');
+  let email = urlParams.get('email');
+  let greet = `Gracias por contactar con nosotros, ${name}`
+  let parrafo = `Nos pondremos en contacto contigo a través de email (${email}) o llamándote al ${phone}`
+
+  document.getElementById('thanks-h2').innerHTML = greet;
+  document.getElementById('thanks-p').innerHTML = parrafo;
+
+  console.log(name)
+
+  if (name == null){ window.location.href = "/contact.html" }
+}
+
+
