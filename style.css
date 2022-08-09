@@ -588,14 +588,12 @@ footer {
 .project-img {
 	z-index: 4;
 	position: absolute;
-	background-image: url("/img/1.jpg");
 	background-size: cover;
 	width: 100%;
 	height: 444px;
 }
 
 .project-img-bg {
-	background-image: url("/img/1.jpg");
 	z-index: 3;
 	background-size: cover;
 	width: 100%;
@@ -932,6 +930,7 @@ footer {
 
 	.project-card,
 	.service-card {
+		min-width: 60%;
 		margin-bottom: 30px;
 		box-shadow: 0px 12px 12px 0px #0000001a;
 	}
@@ -1168,5 +1167,47 @@ footer {
 
 	.project-img-bg {
 		filter: blur(10px);
+	}
+
+	.contact-form-area form {
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(8, auto);
+	}
+
+	.contact-page-form input[id="fname"] {
+		grid-column: 1 / 1;
+		grid-row: 2 / 3;
+	}
+
+	.contact-page-form label[for="email"] {
+		grid-row: 3 / 4;
+	}
+	.contact-page-form input[id="email"] {
+		grid-row: 4 / 5;
+		grid-column: 1 / 1;
+	}
+
+	.contact-page-form label[for="phone"] {
+		grid-row: 5 / 6;
+		grid-column: 1 / 1;
+	}
+	.contact-page-form input[id="phone"] {
+		grid-row: 6 / 7;
+		grid-column: 1 / 1;
+	}
+
+	.contact-page-form label[for="message"] {
+		grid-row: 7 / 8;
+		grid-column: 1 / 1;
+	}
+
+	.contact-page-form textarea {
+		grid-row: 8 / 9;
+		grid-column: 1 / 1;
+	}
+
+	.contact-page-form button {
+		grid-row: 9 / 10;
+		grid-column: 1 / 1;
 	}
 }

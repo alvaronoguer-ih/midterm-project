@@ -40,11 +40,13 @@ function queryParameters(number) {
   console.log(nuevo)
   let title = nuevo[number].childNodes[3].childNodes[0].nodeValue;
   let subtitle = nuevo[number].childNodes[5].childNodes[0].nodeValue;
+  let img = nuevo[number].childNodes[1].attributes.src.value
   title = btoa(title)
   subtitle = btoa(subtitle)
+  img = btoa(img)
   console.log(title)
   console.log(typeof(subtitle))
-  window.location.href = `/post.html?title=${title}&subtitle=${subtitle}`
+  window.location.href = `/post.html?title=${title}&subtitle=${subtitle}&img=${img}`
 }
 
 function contactBtn() {
@@ -65,6 +67,7 @@ function suscribed() {
   document.querySelector('.contact-form').setAttribute('style', 'display: none')
   } else {
     console.log("NOPE")
+    swal("Te has dejado algo", "Introduce un email válido para continuar", "error");
   }
 }
 
@@ -74,6 +77,8 @@ function checkEmail(email) {
   let emailchecked = emailRegex.test(emailToCheck)
   console.log(emailchecked)
   return emailchecked
+
+
 }
 
 
@@ -85,13 +90,19 @@ function titleSubtitle() {
   console.log(urlParams)
   let title = urlParams.get('title');
   let subtitle = urlParams.get('subtitle')
+  let img = urlParams.get('img')
+  img = atob(img)
   title = atob(title)
   subtitle = atob(subtitle)
   console.log(title)
   console.log(subtitle)
+  console.log(img)
 
   document.getElementById('variableTitle').innerHTML = title; 
   document.getElementById('variableSubtitle').innerHTML = subtitle; 
+  document.querySelector('.project-img').setAttribute("style", `background-image: url('${img}')`)
+  document.querySelector('.project-img-bg').setAttribute("style", `background-image: url('${img}')`)
+
 }
 
 function thanksPage() {
